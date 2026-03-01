@@ -2,11 +2,11 @@
 ## Data Mining and Its Applications
 
 ### Group Information
-- **Group ID:** [To be filled]
+- **Group ID:** 05
 - **Members:**
-  - [Name 1] - [Student ID]
-  - [Name 2] - [Student ID]
-  - [Name 3] - [Student ID]
+  - Bùi Minh Duy - 23127040
+  - Phi Anh Khôi - 23127073
+  - Lê Minh Đức - 23127351
 
 ### Assignment Overview
 This project focuses on data preprocessing techniques for different types of data:
@@ -17,19 +17,24 @@ This project focuses on data preprocessing techniques for different types of dat
 ### Datasets Used
 
 #### Part 1: Image Data
-- **Dataset:** [Dataset name to be selected]
-- **Source:** [Dataset source URL]
-- **Description:** [Brief description]
+- **Dataset:** Chest X-Ray Pneumonia
+- **Source:** https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
+- **Description:** 5,863 chest X-ray images (JPEG) in 2 categories: Pneumonia and Normal, organized into train/test/val splits
 
 #### Part 2: Tabular Data
-- **Dataset:** [Dataset name to be selected]
-- **Source:** [Dataset source URL]
-- **Description:** [Brief description]
+- **Dataset:** Car Resale Data - 2023
+- **Source:** https://www.kaggle.com/datasets/rahulmenon1758/car-resale-prices
+- **Description:** 17,446 records with 15 attributes about used car listings in India (price, engine, mileage, fuel type, etc.); target variable is resale_price
 
-#### Part 3/4: Text/Temporal Data (Bonus)
-- **Dataset:** [Dataset name to be selected]
-- **Source:** [Dataset source URL]
-- **Description:** [Brief description]
+#### Part 3: Text Data (Bonus)
+- **Dataset:** IMDB Dataset of 50K Movie Reviews
+- **Source:** https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
+- **Description:** 50,000 IMDB movie reviews labeled as positive or negative for sentiment analysis
+
+#### Part 4: Temporal Data (Bonus)
+- **Dataset:** NASDAQ Stock Market Data (AAPL)
+- **Source:** https://www.kaggle.com/datasets/jacksonce/stock-market-dataset
+- **Description:** Daily AAPL stock prices from 1980 to 2022 (40+ years) including Open, High, Low, Close, Adjusted Close, and Volume
 
 ### Project Structure
 ```
@@ -80,22 +85,10 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-#### 3. Download NLTK Data (Required for Text Preprocessing)
+#### 3. Download Datasets
 
-If you're doing Part 3 (Text), download required NLTK data:
-
-```python
-# Run this in Python or in a Jupyter notebook cell
-import nltk
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
-nltk.download('averaged_perceptron_tagger')
-```
-
-#### 4. Download Datasets
-
-- Follow the links in the respective notebook sections
+- Download all datasets from the Google Drive link below:
+  - **Google Drive:** https://drive.google.com/drive/folders/1ktw0bJKU2pjxvoPSB1UC9_NDBxa3u5qO
 - Place datasets in the appropriate `data/` subdirectories:
   - `data/images/` - for image datasets
   - `data/tabular/` - for tabular datasets
@@ -118,20 +111,11 @@ nltk.download('averaged_perceptron_tagger')
    **Note:** Choose either Part 3 or Part 4 for bonus (not both)
 
 ### External Resources
-- **Google Drive (if datasets > 25MB):** [Link to be added]
-- **Additional Resources:** [Links to be added]
+- **Google Drive (if datasets > 25MB):** https://drive.google.com/drive/folders/1ktw0bJKU2pjxvoPSB1UC9_NDBxa3u5qO
 
 ### Assignment Details
 - **Instructor:** MSc. Lê Nhựt Nam
 - **Email:** lnnam@fit.hcmus.edu.vn
-- **Deadline:** 23:55 13/02/2026
-- **Duration:** ~3 weeks
-
-### Notes
-- All documentation must be in Vietnamese
-- Code must be well-commented and explained
-- AI assistance limited to 30%
-- Late submissions not accepted
 
 ### License
 This project is for educational purposes only as part of CSC14004 - Data Mining course at University of Science, VNU-HCMC.
