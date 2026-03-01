@@ -1,121 +1,123 @@
-# Lab Assignment 01: Data Preprocessing
-## Data Mining and Its Applications
+# Bài Tập Thực Hành 01: Tiền Xử Lý Dữ Liệu
+## Khai Phá Dữ Liệu và Ứng Dụng
 
-### Group Information
-- **Group ID:** 05
-- **Members:**
+### Thông Tin Nhóm
+- **Mã nhóm:** 05
+- **Thành viên:**
   - Bùi Minh Duy - 23127040
   - Phi Anh Khôi - 23127073
   - Lê Minh Đức - 23127351
 
-### Assignment Overview
-This project focuses on data preprocessing techniques for different types of data:
-- **Part 1 (Required):** Image Data Preprocessing
-- **Part 2 (Required):** Tabular Data Preprocessing
-- **Part 3/4 (Bonus - Choose One):** Text or Temporal Data Preprocessing
+### Tổng Quan Bài Tập
+Dự án này tập trung vào các kỹ thuật tiền xử lý dữ liệu cho các loại dữ liệu khác nhau:
+- **Phần 1 (Bắt buộc):** Tiền xử lý dữ liệu hình ảnh
+- **Phần 2 (Bắt buộc):** Tiền xử lý dữ liệu dạng bảng
+- **Phần 3/4 (Bonus - Chọn một):** Tiền xử lý dữ liệu văn bản hoặc dữ liệu thời gian
 
-### Datasets Used
+### Bộ Dữ Liệu Sử Dụng
 
-#### Part 1: Image Data
-- **Dataset:** Chest X-Ray Pneumonia
-- **Source:** https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
-- **Description:** 5,863 chest X-ray images (JPEG) in 2 categories: Pneumonia and Normal, organized into train/test/val splits
+#### Phần 1: Dữ Liệu Hình Ảnh
+- **Tên dataset:** Chest X-Ray Pneumonia
+- **Nguồn:** https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
+- **Mô tả:** 5.863 ảnh X-quang ngực (JPEG) thuộc 2 lớp: Pneumonia và Normal, được chia thành tập train/test/val
 
-#### Part 2: Tabular Data
-- **Dataset:** Car Resale Data - 2023
-- **Source:** https://www.kaggle.com/datasets/rahulmenon1758/car-resale-prices
-- **Description:** 17,446 records with 15 attributes about used car listings in India (price, engine, mileage, fuel type, etc.); target variable is resale_price
+#### Phần 2: Dữ Liệu Dạng Bảng
+- **Tên dataset:** Car Resale Data - 2023
+- **Nguồn:** https://www.kaggle.com/datasets/rahulmenon1758/car-resale-prices
+- **Mô tả:** 17.446 bản ghi với 15 thuộc tính về các xe ô tô đã qua sử dụng tại Ấn Độ (giá, động cơ, tiêu hao nhiên liệu, loại nhiên liệu, v.v.); biến mục tiêu là resale_price
 
-#### Part 3: Text Data (Bonus)
-- **Dataset:** IMDB Dataset of 50K Movie Reviews
-- **Source:** https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
-- **Description:** 50,000 IMDB movie reviews labeled as positive or negative for sentiment analysis
+#### Phần 3: Dữ Liệu Văn Bản (Bonus)
+- **Tên dataset:** IMDB Dataset of 50K Movie Reviews
+- **Nguồn:** https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
+- **Mô tả:** 50.000 đánh giá phim từ IMDB được gán nhãn tích cực (positive) hoặc tiêu cực (negative) cho bài toán phân tích cảm xúc
 
-#### Part 4: Temporal Data (Bonus)
-- **Dataset:** NASDAQ Stock Market Data (AAPL)
-- **Source:** https://www.kaggle.com/datasets/jacksonce/stock-market-dataset
-- **Description:** Daily AAPL stock prices from 1980 to 2022 (40+ years) including Open, High, Low, Close, Adjusted Close, and Volume
+#### Phần 4: Dữ Liệu Thời Gian (Bonus)
+- **Tên dataset:** NASDAQ Stock Market Data (AAPL)
+- **Nguồn:** https://www.kaggle.com/datasets/jacksonce/stock-market-dataset
+- **Mô tả:** Dữ liệu giá cổ phiếu AAPL theo ngày từ năm 1980 đến 2022 (hơn 40 năm) bao gồm Open, High, Low, Close, Adjusted Close và Volume
 
-### Project Structure
+### Cấu Trúc Dự Án
 ```
 Lab01/
-├── README.md                          # This file
-├── requirements.txt                   # Python dependencies
-├── data/                             # Data directory
-│   ├── images/                       # Image datasets
-│   ├── tabular/                      # Tabular datasets
-│   ├── text/                         # Text datasets (if applicable)
-│   └── temporal/                     # Time-series datasets (if applicable)
+├── README.md                          # File này
+├── requirements.txt                   # Các thư viện Python cần thiết
+├── data/                             # Thư mục dữ liệu
+│   ├── images/                       # Dữ liệu hình ảnh
+│   ├── tabular/                      # Dữ liệu dạng bảng
+│   ├── text/                         # Dữ liệu văn bản (nếu có)
+│   └── temporal/                     # Dữ liệu chuỗi thời gian (nếu có)
 ├── notebooks/                        # Jupyter notebooks
-│   ├── 01_image_preprocessing.ipynb         # Part 1 (Required)
-│   ├── 02_tabular_preprocessing.ipynb       # Part 2 (Required)
-│   ├── 03_text_preprocessing.ipynb          # Part 3 (Bonus)
-│   └── 04_temporal_preprocessing.ipynb      # Part 4 (Bonus)
-└── docs/                             # Documentation
-    └── Report.pdf                     # Final report
+│   ├── 01_image_preprocessing.ipynb         # Phần 1 (Bắt buộc)
+│   ├── 02_tabular_preprocessing.ipynb       # Phần 2 (Bắt buộc)
+│   ├── 03_text_preprocessing.ipynb          # Phần 3 (Bonus)
+│   └── 04_temporal_preprocessing.ipynb      # Phần 4 (Bonus)
+└── docs/                             # Tài liệu
+    └── Report.pdf                     # Báo cáo cuối kỳ
 ```
 
-### Installation & Setup
+### Hướng Dẫn Cài Đặt
 
-#### 1. Create Python Virtual Environment (Recommended)
+#### 1. Tạo Môi Trường Ảo Python (Khuyến nghị)
 
-A virtual environment keeps your project dependencies isolated and prevents conflicts with other projects.
+Môi trường ảo giúp cách ly các thư viện của dự án, tránh xung đột với các dự án khác.
 
 ```bash
-# Navigate to project directory
+# Di chuyển đến thư mục dự án
 python -m venv .venv
 
-# Activate virtual environment
-# On Windows:
+# Kích hoạt môi trường ảo
+# Trên Windows:
 .venv\Scripts\activate
 
-# On macOS/Linux:
+# Trên macOS/Linux:
 source .venv/bin/activate
 ```
 
-#### 2. Install Python Dependencies
+#### 2. Cài Đặt Các Thư Viện Python
 
-With the virtual environment activated:
+Sau khi kích hoạt môi trường ảo:
 
 ```bash
-# Upgrade pip first (recommended)
+# Nâng cấp pip trước (khuyến nghị)
 python -m pip install --upgrade pip
 
-# Install all required packages
+# Cài đặt tất cả các thư viện cần thiết
 pip install -r requirements.txt
 ```
 
-#### 3. Download Datasets
+#### 3. Tải Dữ Liệu
 
-- Download all datasets from the Google Drive link below:
+- Tải toàn bộ dữ liệu từ link Google Drive bên dưới:
   - **Google Drive:** https://drive.google.com/drive/folders/1ktw0bJKU2pjxvoPSB1UC9_NDBxa3u5qO
-- Place datasets in the appropriate `data/` subdirectories:
-  - `data/images/` - for image datasets
-  - `data/tabular/` - for tabular datasets
-  - `data/text/` - for text datasets
-  - `data/temporal/` - for temporal datasets
+- Đặt dữ liệu vào các thư mục con tương ứng trong `data/`:
+  - `data/images/` - dữ liệu hình ảnh
+  - `data/tabular/` - dữ liệu dạng bảng
+  - `data/text/` - dữ liệu văn bản
+  - `data/temporal/` - dữ liệu chuỗi thời gian
 
-### Running the Notebooks
+### Chạy Notebooks
 
-1. Navigate to the project directory
-2. Launch Jupyter Notebook:
+1. Di chuyển đến thư mục dự án
+2. Khởi động Jupyter Notebook:
    ```bash
    jupyter notebook
    ```
-3. Open notebooks in the `notebooks/` directory:
-   - `01_image_preprocessing.ipynb` (Required - Part 1)
-   - `02_tabular_preprocessing.ipynb` (Required - Part 2)
-   - `03_text_preprocessing.ipynb` (Bonus - Part 3)
-   - `04_temporal_preprocessing.ipynb` (Bonus - Part 4)
-   
-   **Note:** Choose either Part 3 or Part 4 for bonus (not both)
+3. Mở các notebook trong thư mục `notebooks/`:
+   - `01_image_preprocessing.ipynb` (Bắt buộc - Phần 1)
+   - `02_tabular_preprocessing.ipynb` (Bắt buộc - Phần 2)
+   - `03_text_preprocessing.ipynb` (Bonus - Phần 3)
+   - `04_temporal_preprocessing.ipynb` (Bonus - Phần 4)
 
-### External Resources
-- **Google Drive (if datasets > 25MB):** https://drive.google.com/drive/folders/1ktw0bJKU2pjxvoPSB1UC9_NDBxa3u5qO
+   **Lưu ý:** Chỉ chọn một trong Phần 3 hoặc Phần 4 cho phần bonus
 
-### Assignment Details
-- **Instructor:** MSc. Lê Nhựt Nam
+### Thông Tin Môn Học
+- **Giảng viên:** ThS. Lê Nhựt Nam
 - **Email:** lnnam@fit.hcmus.edu.vn
 
-### License
-This project is for educational purposes only as part of CSC14004 - Data Mining course at University of Science, VNU-HCMC.
+### Lưu Ý
+- **Notebook 1 (Tiền xử lý hình ảnh):** Do giới hạn phần cứng, `01_image_preprocessing.ipynb` có thể không chạy được trên một số máy. Thầy có thể truy cập link GitHub bên dưới để xem output đã được chạy sẵn. Do giới hạn dung lượng, nhóm không thể nộp notebook kèm output lên Moodle:
+  - **GitHub:** https://github.com/callmezuy/hcmus-data-mining--preprocessing
+
+### Giấy Phép
+Dự án này chỉ phục vụ mục đích học tập trong khuôn khổ môn CSC14004 - Khai phá dữ liệu và ứng dụng tại Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM.
+
